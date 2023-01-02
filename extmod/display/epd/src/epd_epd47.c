@@ -69,7 +69,7 @@ STATIC mp_obj_t epd47_power(mp_obj_t self_in, mp_obj_t onoff_in)
     if (mp_obj_is_true(onoff_in))
         epd_poweron();
     else
-        epd_poweroff();
+        epd_poweroff_all(); // epd_poweroff();
 
     return mp_const_none;
 }
